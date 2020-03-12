@@ -12,5 +12,5 @@ blogRouter.get('/admin', (request, response) => {
     response.send('Bienvenue sur l\'espace d\'administration!');
 });
 
-//eexporte l'objet router crée
+//exporte l'objet router crée
 module.exports=blogRouter;

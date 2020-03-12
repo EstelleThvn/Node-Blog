@@ -1,4 +1,7 @@
+require('dotenv').config();
 const express = require('express');
+const mongoose = require('mongoose');
+
 const app = express();
 const blogRouter = require('./blog.routeur');
 
@@ -13,6 +16,15 @@ app.use ('/', blogRouter); //traite toutes les routes pour la partie front offic
 //démarrage de l'application
 //-----------------------------------
 
-app.listen(PORT,HOST, () => {
-    console.log(`Express : le serveur écoute sur http://${HOST}:${PORT}`);
-});
+const options = {
+    useNewUrlParser: true,
+    useUnifiedTopology:true
+}
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`, options)
+        .then(() => console.log('Mongoose : connexion établie à Atlas !'))
+        .then(() => {
+            app.listen(PORT,HOST, () => {
+                console.log(`Express : le serveur écoute sur http://${HOST}:${PORT}`);
+            })
+        })
+        .catch((err) => console.error(err));
