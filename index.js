@@ -8,6 +8,8 @@ const blogRouter = require('./blog.routeur');
 app.set('view engine', 'pug'); //indique à Express que le moteur de templating à utiliser sera "Pug"
 app.set('views', './views'); //indique à Express le dossier où se trouvent les vues (fichiers .pug)
 
+app.use(express.static('./public'));
+
 const PORT = 9000;
 const HOST = 'localhost';
 

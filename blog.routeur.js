@@ -8,8 +8,20 @@ blogRouter.get('/', (request, response) => {
     response.render('index.pug', { prenom });
 });
 
-blogRouter.get('/admin', (request, response) => {
-    response.send('Bienvenue sur l\'espace d\'administration!');
+blogRouter.get('/article/:id', (request, response) => {
+    response.render('article.pug');
+});
+
+blogRouter.get('/admin/', (request, response) => {
+    response.render('./admin/admin.pug');
+});
+
+blogRouter.get('/admin/write', (request, response) => {
+    response.render('./admin/write.pug');
+});
+
+blogRouter.get('/admin/edit/:id', (request, response) => {
+    response.render('./admin/edit.pug');
 });
 
 //exporte l'objet router crée

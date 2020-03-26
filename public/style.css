@@ -1,0 +1,51 @@
+body {
+    background-color: #fefefe;
+    margin: 0;
+}
+
+.container-index {
+    background-color: rgb(147, 194, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.4);
+}
+
+.article {
+    background-color: rgba(147, 194, 255, 0.5);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.article-detail {
+    background-color: rgba(147, 194, 255, 0.2);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+th {
+    padding : 0.5rem 1rem;
+    background-color: rgb(147, 194, 255);
+}
+
+td {
+    padding: 0.25rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td  {
+    border: solid 1px black;
+}
+
+.admin-accueil {
+    padding: 1rem;
+}
+
+.form {
+    border: solid 1px #000;
+    padding: 1rem;
+}

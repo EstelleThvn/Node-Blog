@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="../style.css")
+    body
+
+        div(class='container-index')
+            div
+                a(href='/')
+                    h1 Mon blog
+                p Node.js c'est trop le fun 🙃
+            a(href='/admin/') ⚙️ Administration
+
+        a(href='/admin') ⬅️ retour à l'espace d'administration
+
+        h1 Écrire un nouvel article
+
+        p Renseignez le formulaire suivant pour ajouter un nouvel article : 
+        
+
+        div(class='form')
+            h3 Ajout d'un article
+
+            form
+                label Titre : 
+                br
+                input(type="text")
+                br
+                br
+                label Catégorie : 
+                br
+                select(name="cat")
+                            option(value="") Humour
+                            option(value="") Ah bah
+                            option(value="") Super
+                br
+                br
+                label(for="") Contenu : 
+                br
+                textarea(name="", cols="50", rows="10" placeholder="lorem dolor sit amet...")
+                br
+                br
+                label Auteur : 
+                br
+                select(name="cat")
+                            option(value="") JPM
+                            option(value="") Je sais
+                            option(value="") Pas
+                br
+                br
+                input(class='btnSub',type="submit",value='Publier')

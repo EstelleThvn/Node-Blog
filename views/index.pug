@@ -4,10 +4,45 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        link(rel="stylesheet", href="style.css")
     body
-        h1 Salut #{prenom}
-        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti et, tenetur earum sequi veritatis iusto enim animi commodi ipsum, quae delectus necessitatibus cumque nulla expedita! Aliquam sit error ut voluptas.
+        //- h1 Salut #{prenom}
+        //- p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti et, tenetur earum sequi veritatis iusto enim animi commodi ipsum, quae delectus necessitatibus cumque nulla expedita! Aliquam sit error ut voluptas.
 
-        ul
-            each val in [1, 2, 3, 4, 5]
-                li= val
+        //- ul
+        //-     each val in [1, 2, 3, 4, 5]
+        //-         li= val
+
+        div(class='container-index')
+            div
+                a(href='/')
+                    h1 Mon blog
+                p Node.js c'est trop le fun 🙃
+            a(href='/admin/') ⚙️ Administration
+
+        h2 Bienvenue sur mon blog
+        p Voici la liste des derniers articles du blog
+
+        div(class='article')
+            a(href='/article/1') 
+                h3 Titre 1
+            p lorem ipsum dolor sit...
+            a(href='/article/1') lire la suite
+            p 📅 Publié le dd/mm/yyyy à hh:mm, par Auteur 1
+            p 🏷️ Catégorie 1
+
+        div(class='article')
+            a(href='/article/2') 
+                h3 Titre 2
+            p lorem ipsum dolor sit...
+            a(href='/article/2') lire la suite
+            p 📅 Publié le dd/mm/yyyy à hh:mm, par Auteur 1
+            p 🏷️ Catégorie 2
+
+        div(class='article')
+            a(href='/article/3') 
+                h3 Titre 3
+            p lorem ipsum dolor sit...
+            a(href='/article/3') lire la suite
+            p 📅 Publié le dd/mm/yyyy à hh:mm, par Auteur 1
+            p 🏷️ Catégorie 3
